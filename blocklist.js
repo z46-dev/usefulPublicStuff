@@ -20,7 +20,7 @@
             });
         },
         removeByIndex: function(index) {
-            blocklist = blocklist;
+            blocklist = blocklist.splice(index, 1);
         }
     }
 })();
