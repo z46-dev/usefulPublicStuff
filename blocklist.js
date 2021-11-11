@@ -7,9 +7,9 @@
             console.log("Blocked fetch request\nURL:", URL, "\nTimestamp:", new Date());
             return;
         }
-        _fetch(...arguments);
+        return _fetch(...arguments);
     }
-    return {
+    window.blocklist = {
         add: function(url) {
             blocklist.push(url.toLowerCase().replace("http://", "").replace("https://", ""));
         },
